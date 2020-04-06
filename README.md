@@ -14,18 +14,18 @@ Move to the Docker folder: `cd Docker`
 
 ## Install Amundsen (bundled with Neo4J)
 Clone Amundsen master branch from Github: `git clone --recursive https://github.com/lyft/amundsen.git`
+
+Move to the folder: `cd amundsen`  
+Launch Amundsen: `docker-compose -f docker-amundsen.yml up`
+>Troubleshooting: if the former ends with an error, shut the process down (ctrl+c in terminal) and launch a new command to extend the virtual memory available to Elasticsearch (cf. https://github.com/lyft/amundsen/issues/77): `sudo sysctl -w vm.max_map_count=262144`, then relaunch the previous command (`docker-compose -f docker-amundsen.yml up`).
+
 Populate the database with dummy data (4 fake tables included in Amundsen repo)  
-`cd amundsen`  
+
 `cd amundsendatabuilder`  
 `python3 -m venv venv`  
 `pip3 install -r requirements.txt`  
 `python3 setup.py install`  
 `python3 example/scripts/sample_data_loader.py`  
-
-Go back to ~/Docker/Amundsen: `cd ..`
-Launch Amundsen: `docker-compose -f docker-amundsen.yml up`  
-
->Troubleshooting: if the former ends with an error, extend the virtual memory available to Elasticsearch (cf. https://github.com/lyft/amundsen/issues/77): `sudo sysctl -w vm.max_map_count=262144`  
 
 Connect to the interface with your web browser to check that it dispays something: http://localhost:5000  
 A Neo4J instance was installed along with Amundsen. Launch the Neo4J web interface: http://localhost:7474/ 
