@@ -48,7 +48,13 @@ Click on the 'Datasources' tab and add a new datasource and fill-in:
 - codes : admin, admin
 - Workspace: user default
 
-# Run
+# Run and admin
+
+## Docker
+get container id and name: `docker ps`
+get container ip (replace #mycontainer# by container name or id :   
+`docker inspect -f '{{range .NetworkSettings.Networks}}{{.IPAddress}}{{end}}' #my_container#`
+
 
 ## Neo4J
 
