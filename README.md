@@ -29,6 +29,7 @@ Populate the database with dummy data (4 fake tables included in Amundsen repo)
 
 Connect to the interface with your web browser to check that it dispays something: http://localhost:5000  
 A Neo4J instance was installed along with Amundsen. Launch the Neo4J web interface: http://localhost:7474/ 
+Default Neo4J credentials: neo4j/test
 
 ## Install ArcadeAnalytics and connect it to Neo4J 
 Go back to ~/Docker if you were still in ~/Docker/Amundsen: `cd ..`  
