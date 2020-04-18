@@ -58,6 +58,6 @@ get container ip (replace #mycontainer# by container name or id :
 
 
 ## Neo4J
-
+Delete all nodes and relationships in Neo4J database: `MATCH (n) DETACH DELETE n`
 
 # Backup
