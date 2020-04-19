@@ -49,6 +49,14 @@ Click on the 'Datasources' tab and add a new datasource and fill-in:
 - codes : admin, admin
 - Workspace: user default
 
+## Install Apache Atlas 2.0 (alternative backend to Neo4J for Amundsen, based on JanusGraph)
+See (unaccurate) how-to on [Atlas official documentation](https://atlas.apache.org/#/Installation).
+Corrections : 
+- first download 2.0 [from official repo](https://atlas.apache.org/#/Downloads)
+- bin/atlas_start.py should read `distro/src/bin/atlas_start.py`
+
+bin/atlas_start.py
+
 # Run and admin
 
 ## Docker
